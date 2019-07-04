@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<ng-template #loading>
+  ...
+</ng-template>
+
+
+<h1>Hot Weather Widget</h1>
+
+<div class="element" *ngIf="(hotels | async) as hotels; else loading">
+
+  <app-main [hotels]="hotels"></app-main>
+
+  <div class="element-right">
+    <app-weather></app-weather>
+    <app-social></app-social>
+  </div>
+
+  <div class="clear"> </div>
+</div>
+
+
